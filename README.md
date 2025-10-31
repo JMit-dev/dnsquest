@@ -69,7 +69,7 @@ NXDOMAIN Error: Domain thisdoesnotexist12345.com. does not exist (NXDOMAIN)
 1. **Clone or download the repository:**
    ```bash
    git clone <repository-url>
-   cd mydig
+   cd dnsquest
    ```
 
 2. **Install required dependencies:**
@@ -79,7 +79,7 @@ NXDOMAIN Error: Domain thisdoesnotexist12345.com. does not exist (NXDOMAIN)
 
 3. **Verify installation:**
    ```bash
-   python dnsquest.py www.google.com
+   python -m dnsquest www.google.com
    ```
 
 ### Using a Virtual Environment (Recommended)
@@ -98,7 +98,7 @@ source venv/bin/activate
 pip install dnspython
 
 # Run the program
-python dnsquest.py www.example.com
+python -m dnsquest www.example.com
 ```
 
 ## How to Use
@@ -108,24 +108,31 @@ python dnsquest.py www.example.com
 Resolve a domain name:
 
 ```bash
-python dnsquest.py www.google.com
+python -m dnsquest www.google.com
+```
+
+Or install the package and use as a command:
+
+```bash
+pip install -e .
+dnsquest www.google.com
 ```
 
 ### Example Queries
 
 1. **Simple domain:**
    ```bash
-   python dnsquest.py www.cnn.com
+   python -m dnsquest www.cnn.com
    ```
 
 2. **Domain with CNAME:**
    ```bash
-   python dnsquest.py google.co.jp
+   python -m dnsquest google.co.jp
    ```
 
 3. **Subdomain:**
    ```bash
-   python dnsquest.py mail.google.com
+   python -m dnsquest mail.google.com
    ```
 
 ### Understanding the Output
@@ -153,7 +160,7 @@ WHEN: Fri Oct 31 14:23:45 2025
 
 **Non-existent domain:**
 ```bash
-python dnsquest.py thisdoesnotexist12345.com
+python -m dnsquest thisdoesnotexist12345.com
 # Output: NXDOMAIN Error: Domain thisdoesnotexist12345.com. does not exist (NXDOMAIN)
 ```
 
@@ -175,17 +182,17 @@ Test with known working domains:
 
 ```bash
 # Test basic resolution
-python dnsquest.py www.google.com
+python -m dnsquest www.google.com
 
 # Test CNAME following
-python dnsquest.py google.co.jp
+python -m dnsquest google.co.jp
 
 # Test NXDOMAIN
-python dnsquest.py thisdoesnotexist12345.com
+python -m dnsquest thisdoesnotexist12345.com
 
 # Test various TLDs
-python dnsquest.py www.bbc.co.uk
-python dnsquest.py www.tokyo.jp
+python -m dnsquest www.bbc.co.uk
+python -m dnsquest www.tokyo.jp
 ```
 
 ### Expected Results
@@ -203,7 +210,7 @@ Compare DNSQuest with system dig:
 
 ```bash
 # DNSQuest
-time python dnsquest.py www.example.com
+time python -m dnsquest www.example.com
 
 # System dig (for comparison)
 dig www.example.com
