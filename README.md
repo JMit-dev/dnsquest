@@ -4,7 +4,7 @@ A lightweight, iterative DNS resolver built in Python that mimics the functional
 
 ## Build Status
 
-![Python](https://img.shields.io/badge/python-3.7%2B-blue)
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
 ![Status](https://img.shields.io/badge/build-passing-brightgreen)
 
 ## Code Style
@@ -16,7 +16,7 @@ This project follows Python's PEP 8 style guidelines.
 ## Tech/Framework Used
 
 **Built with:**
-- Python 3.7+
+- Python 3.8+
 - dnspython library
 
 **Key Technologies:**
@@ -61,7 +61,7 @@ NXDOMAIN Error: Domain thisdoesnotexist12345.com. does not exist (NXDOMAIN)
 
 ### Prerequisites
 
-- Python 3.7 or higher
+- Python 3.8 or higher
 - pip package manager
 
 ### Step-by-step Installation
